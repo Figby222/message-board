@@ -19,4 +19,8 @@ function getMessageForm(req, res) {
     res.render("form");
 }
 
-export { getRootPage, getMessageForm }
+function postMessage(req, res) {
+    messages.push({ text: req.message, user: req["author-name"], added: new Date() });
+}
+
+export { getRootPage, getMessageForm, postMessage }
