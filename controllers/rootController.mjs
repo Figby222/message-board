@@ -20,7 +20,7 @@ function getMessageForm(req, res) {
 }
 
 function postMessage(req, res) {
-    messages.push({ text: req.message, user: req.user, added: new Date() });
+    messages.push({ text: req.body.message, user: req.body.user, added: new Date() });
     res.redirect("/");
 }
 
