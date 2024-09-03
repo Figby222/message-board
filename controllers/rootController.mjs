@@ -24,4 +24,9 @@ function postMessage(req, res) {
     res.redirect("/");
 }
 
-export { getRootPage, getMessageForm, postMessage }
+function getMessage(req, res) {
+    const message = messages[req.params.messageId];
+    res.render("message", { text: message.text, user: message.user, added: message.added });
+}
+
+export { getRootPage, getMessageForm, postMessage, getMessage }
