@@ -6,5 +6,14 @@
     <body>
         <h1>Message Board</h1>
         <p>Hi</p>
+        <ul class="messages">
+            <% for (let i = 0; i < messages.length; i++) { %>
+                <li class="message">
+                    <h2 class="message-user"><%= messages[i].user %>:</h2>
+                    <p class="message-text"><%= messages[i].text %></p>
+                    <p class="message-date"><%= messages[i].added %></p>
+                </li>
+            <% } %>
+        </ul>
     </body>
 </html>
