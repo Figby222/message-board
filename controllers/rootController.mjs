@@ -20,7 +20,8 @@ function getMessageForm(req, res) {
 }
 
 function postMessage(req, res) {
-    messages.push({ text: req.message, user: req["author-name"], added: new Date() });
+    messages.push({ text: req.message, user: req.user, added: new Date() });
+    res.redirect("/");
 }
 
 export { getRootPage, getMessageForm, postMessage }
