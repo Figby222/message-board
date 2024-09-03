@@ -7,4 +7,6 @@ rootRouter.get("/", rootController.getRootPage);
 
 rootRouter.get("/new", rootController.getMessageForm);
 
+rootRouter.post("/new", rootController.postMessage);
+
 export default rootRouter;
