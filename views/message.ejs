@@ -4,6 +4,9 @@
         <title>Message Board Message</title>
     </head>
     <body>
+        <header>
+            <%- include("navbar") %>
+        </header>
         <h1 class="message-user"><%= user %>:</h1>
         <p class="message-text"><%= text %></p>
         <p class="message-date"><%= added %></p>
