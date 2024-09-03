@@ -1,0 +1,19 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "A Node.js message board used to send and view messages on a board",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Figby222/mini-message-board.git"
+  },
+  "author": "Figby222",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Figby222/mini-message-board/issues"
+  },
+  "homepage": "https://github.com/Figby222/mini-message-board#readme"
+}
