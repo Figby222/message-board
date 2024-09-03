@@ -15,4 +15,8 @@ function getRootPage(req, res) {
     res.render("index", { messages: messages });
 }
 
-export { getRootPage }
+function getMessageForm(req, res) {
+    res.render("form");
+}
+
+export { getRootPage, getMessageForm }
