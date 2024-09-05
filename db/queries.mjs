@@ -13,4 +13,12 @@ async function getMessages() {
     return rows;
 }
 
-export default { insertMessage, getMessages }
+async function searchForMessage(string) {
+    const { rows } = await pool.query(`
+        SELECT * FROM messages WHERE LOWER(text) LIKE LOWER($1)
+    `, ['%' + string + '%'])
+
+    return rows;
+}
+
+export default { insertMessage, getMessages, searchForMessage }
