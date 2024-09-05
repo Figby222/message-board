@@ -7,4 +7,10 @@ async function insertMessage(username, text, added) {
     `, [username, text, added])
 }
 
-export default { insertMessage }
+async function getMessages() {
+    const { rows } = await pool.query(`SELECT * FROM messages`)
+
+    return rows;
+}
+
+export default { insertMessage, getMessages }
