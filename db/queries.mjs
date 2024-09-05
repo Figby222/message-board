@@ -18,7 +18,7 @@ async function getMessage(id) {
         SELECT * FROM messages WHERE id = $1
     `, [id])
 
-    return rows;
+    return rows[0];
 }
 
 export default { insertMessage, getMessages, getMessage }
