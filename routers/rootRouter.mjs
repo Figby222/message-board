@@ -9,6 +9,6 @@ rootRouter.get("/new", rootController.getMessageForm);
 
 rootRouter.post("/new", rootController.postMessage);
 
-// rootRouter.get("/:messageId", rootController.getMessage);
+rootRouter.get("/messages/:messageId", rootController.getMessage);
 
 export default rootRouter;
