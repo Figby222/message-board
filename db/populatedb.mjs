@@ -7,12 +7,13 @@ const SQL = `
         id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
         username TEXT,
         message TEXT,
-        date DATE NOT NULL DEFAULT CURRENT_DATE
+        added TEXT
     );
 
-    INSERT INTO messages (username, message)
-        VALUES("Cookie Monster", "Hi", ${Date.now()}),
-        VALUES("Sandwich", "Hello World!", ${Date.now()});
+    INSERT INTO messages (username, message, added)
+    VALUES
+        ('Cookie Monster', 'Hi', ${Date.now()}),
+        ('Sandwich', 'Hello World!', ${Date.now()});
 
 `;
 
