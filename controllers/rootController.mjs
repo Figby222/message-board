@@ -28,8 +28,8 @@ async function postMessage(req, res) {
     res.redirect("/");
 }
 
-function getMessage(req, res) {
-    const message = db.getMessage(req.params.messageId);
+async function getMessage(req, res) {
+    const message = await db.getMessage(req.params.messageId);
     res.render("message", { text: message.text, username: message.username, added: message.added });
 }
 
