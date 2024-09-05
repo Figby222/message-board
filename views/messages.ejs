@@ -4,7 +4,7 @@
             <h2 class="message-user"><%= messages[i].username %>:</h2>
             <p class="message-text"><%= messages[i].text %></p>
             <p class="message-date"><%= messages[i].added %></p>
-            <a class="open-message-details" href="/<%= i %>">Open</a>
+            <a class="open-message-details" href="/messages/<%= i %>">Open</a>
         </li>
     <% } %>
 </ul>
