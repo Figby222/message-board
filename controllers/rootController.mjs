@@ -29,7 +29,7 @@ async function postMessage(req, res) {
 }
 
 function getMessage(req, res) {
-    const message = messages[req.params.messageId];
+    const message = db.getMessage(req.params.messageId);
     res.render("message", { text: message.text, username: message.username, added: message.added });
 }
 
