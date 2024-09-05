@@ -23,8 +23,8 @@ function getMessageForm(req, res) {
     res.render("form");
 }
 
-function postMessage(req, res) {
-    messages.push({ text: req.body.message, username: req.body.username, added: new Date() });
+async function postMessage(req, res) {
+    await db.insertMessage({ text: req.body.message, username: req.body.username, added: new Date() });
     res.redirect("/");
 }
 
