@@ -1,7 +1,7 @@
 <ul class="messages">
     <% for (let i = 0; i < messages.length; i++) { %>
         <li class="message">
-            <h2 class="message-user"><%= messages[i].user %>:</h2>
+            <h2 class="message-user"><%= messages[i].username %>:</h2>
             <p class="message-text"><%= messages[i].text %></p>
             <p class="message-date"><%= messages[i].added %></p>
             <a class="open-message-details" href="/<%= i %>">Open</a>

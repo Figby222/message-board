@@ -1,12 +1,12 @@
 const messages = [
     {
         text: "Hi",
-        user: "Cookie Monster",
+        username: "Cookie Monster",
         added: new Date()
     },
     {
         text: "Hello World!",
-        user: "Sandwich",
+        username: "Sandwich",
         added: new Date()
     }
 ];
@@ -20,13 +20,13 @@ function getMessageForm(req, res) {
 }
 
 function postMessage(req, res) {
-    messages.push({ text: req.body.message, user: req.body.user, added: new Date() });
+    messages.push({ text: req.body.message, username: req.body.username, added: new Date() });
     res.redirect("/");
 }
 
 function getMessage(req, res) {
     const message = messages[req.params.messageId];
-    res.render("message", { text: message.text, user: message.user, added: message.added });
+    res.render("message", { text: message.text, username: message.username, added: message.added });
 }
 
 export { getRootPage, getMessageForm, postMessage, getMessage }
