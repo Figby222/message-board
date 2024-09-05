@@ -1,3 +1,5 @@
+import db from "../db/queries.mjs";
+
 const messages = [
     {
         text: "Hi",
@@ -11,7 +13,9 @@ const messages = [
     }
 ];
 
-function getRootPage(req, res) {
+async function getRootPage(req, res) {
+    const messages = await db.getMessages();
+    console.log(messages);
     res.render("index", { messages: messages });
 }
 
